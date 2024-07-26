@@ -62,18 +62,13 @@ var student =[
       {id : 3, name:"김준현"}
 ];
 // 객체 배렬에서 name 속성이 null인 객체가 있는지 판별을 확인하는 코드를 작성하고 반환값을 출력해주세요
+student.forEach(item => item.name ? console.log('null이 존재하지 않습니다') : console.log('null이 존재합니다'))
 
 9.
 var arr = ["banana", "kiwi", "mango", "strawberry", "lime", "orange", "plum", "cherry"];
 // 문자열 길이가 5를 초과하는 요소가 있는지 검사하는 코드를 작성하고 반환값을 출력해주세요.
-let strTest = function(arr){
-    arr.find(function(item){
-        if(item.length > 5){
-            console.log("5를 초과하는 문자열이 있습니다");
-        }
-    })
-}
-console.log(strTest(arr));
+var arr2 = arr.filter(item => item.length > 5)
+console.log(arr2);
 
 10.
 var arr = ["banana", "kiwi", "mango"];
@@ -84,14 +79,10 @@ console.log(arr)
 11.
 var arr = [1, 5, -3, 10, 0, 8];
 // 배열에 음수가 하나라도 있는지 판별하는 코드를 작성하고 반환값을 출력해주세요
-let arrayTest = function(arr){
-    arr.find(function(item){
-        if(item < 0){
-            console.log("음수가 있습니다");
-        }
-    })
-}
-console.log(arrayTest(arr));
+let arrayTest = arr.filter(function(item){
+    return item < 0;
+})
+console.log(arrayTest);
 
 12.
 var arr = [1, 5, -3, 10, 0, 8];

@@ -1,9 +1,7 @@
 //해당 문제를 forEach로 변경하여 풀어주세요
 let arr = [10, 20, 30];
 let items = []
-arr.forEach((item) => {
-    items.push(item*10)}
-);
+arr.forEach((item) => items.push(item*10));
 console.log(items);
 
 // 해당 로직을 작성하세요  
@@ -12,7 +10,7 @@ console.log(items);
 
 let arr3 =  [10, 22, 33]
 let items2 = []
-arr3.forEach(function(item){
+arr3.forEach((item) =>{
     if(item % 5 == 0){
         items2.push(item)
     }

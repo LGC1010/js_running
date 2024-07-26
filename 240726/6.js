@@ -4,12 +4,18 @@ const students = [
   { name: "김준현", scores: [90, 95] },
   { name: "정윤오", scores: [75, 70] },
 ];
+
+const avgStudents = [];
 // 여기에 코드를 작성해주세요
 students.map(function(item){
-    console.log(item.scores)
-    item.scores
+    let avg = item.scores.reduce(function(a,b){
+        return (a + b) / item.scores.length;
+    });
+    if (avg > 80){
+        avgStudents.push(item.name)
+    }
 })
-console.log(students[2].scores)
+console.log(avgStudents)
 // 예상 출력: ["이재상", "김준현"]
 
 2.
